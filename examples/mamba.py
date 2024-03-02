@@ -287,7 +287,6 @@ def pscan_matrix_write(op, inp: List[F[T, '... L _ _']], reverse=False):
         else:
             final = list(map(lambda x: x.clone(), x))
             list(map(lambda x: x.zero_(), x))
-
     pscan(inp)
     for di, f in zip(inp, final):
         if reverse:
